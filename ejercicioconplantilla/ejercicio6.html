@@ -6,121 +6,84 @@
   <title>Ganadores del Balón de Oro</title>
   <style>
     :root{
-      --bg:#0f1724;
-      --card:#0b1220;
-      --accent:#f5c042;
-      --muted:#cbd5e1;
-      --glass: rgba(255,255,255,0.03);
+      --gold:#e8c465;
+      --gold-light:#f1dca4;
+      --gold-dark:#c49e3c;
+      --black:#0b0b0c;
+      --black-soft:#141417;
       font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
 
-    html,body{
-      height:100%;
+    body{
       margin:0;
-      background: linear-gradient(180deg, #071029 0%, var(--bg) 100%);
-      color:var(--muted);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
-
-    .wrap{
-      min-height:100%;
+      min-height:100vh;
+      background: radial-gradient(circle at center, #121212 0%, #000000 100%);
       display:flex;
       align-items:center;
       justify-content:center;
-      padding:32px;
-      box-sizing:border-box;
+      padding:40px;
+      color:white;
     }
 
     .card{
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
-      border-radius:16px;
-      padding:28px;
-      width:340px;
-      max-width:94vw;
+      background: rgba(20,20,20,0.6);
+      backdrop-filter: blur(12px);
+      border-radius:20px;
+      padding:35px;
+      width:360px;
+      max-width:95vw;
       text-align:center;
-      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
-      border: 1px solid rgba(255,255,255,0.04);
+      box-shadow: 0 0 25px rgba(0,0,0,0.8),
+                  0 0 50px rgba(255,215,0,0.06);
+      border: 1px solid rgba(255,215,0,0.18);
+    }
+
+    /* Borde dorado doble */
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:-3px;
+      border-radius:22px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      z-index:-1;
     }
 
     .title{
-      font-size:18px;
-      letter-spacing:0.6px;
-      margin:0 0 18px 0;
-      color:var(--muted);
-      opacity:0.95;
+      font-size:22px;
+      margin-bottom:20px;
+      letter-spacing:1px;
+      font-weight:700;
+      color:var(--gold-light);
+      text-shadow:0 2px 10px rgba(0,0,0,0.7);
     }
 
-    .trophy{
-      width:150px;
-      height:150px;
-      margin: 0 auto 18px auto;
-      display:block;
+    .img{
+      width:200px;
+      height:auto;
+      border-radius:12px;
+      box-shadow:0 0 20px rgba(0,0,0,0.7),
+                 0 0 25px rgba(255,215,0,0.12);
+      border:2px solid rgba(255,215,0,0.25);
     }
 
     .caption{
-      font-weight:700;
-      color:var(--accent);
-      font-size:20px;
-      margin-top:6px;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-    }
-
-    .sub{
-      margin-top:8px;
-      color: #98a4b3;
-      font-size:13px;
-    }
-
-    /* botón de ejemplo para reemplazar imagen */
-    .btn{
       margin-top:18px;
-      display:inline-block;
-      padding:8px 14px;
-      border-radius:10px;
-      background: linear-gradient(90deg, rgba(245,192,66,0.12), rgba(245,192,66,0.06));
-      border: 1px solid rgba(245,192,66,0.12);
-      color:var(--accent);
-      text-decoration:none;
-      font-size:13px;
+      font-size:20px;
+      font-weight:800;
+      color:var(--gold);
+      text-shadow:0 2px 12px rgba(0,0,0,0.9);
     }
 
-    @media (min-width:700px){
-      .card{ width:420px; padding:36px; }
-      .trophy{ width:180px; height:180px; }
-    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="card" role="region" aria-labelledby="heading">
-      <h2 id="heading" class="title">Ganadores del Balón de Oro</h2>
+  <div class="card">
+    <h2 class="title">Ganadores del Balón de Oro</h2>
 
-      <!-- SVG de trofeo dorado (puedes reemplazar por <img src="tu-imagen.jpg" alt="Balón de Oro">) -->
-      <svg class="trophy" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-        <defs>
-          <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-            <stop offset="0" stop-color="#fff2d2"/>
-            <stop offset="1" stop-color="#f5c042"/>
-          </linearGradient>
-        </defs>
-        <rect width="64" height="64" rx="10" fill="transparent"/>
-        <g transform="translate(8,6)">
-          <path d="M24 2c-6.627 0-12 5.373-12 12 0 4.964 3.05 9.206 7.5 11.113V33h9v-7.887C32.95 23.206 36 18.964 36 14c0-6.627-5.373-12-12-12z" fill="url(#g)"/>
-          <path d="M6 7C3.8 7 2 8.8 2 11v2h3c.552 0 1 .448 1 1v1c0 .552.448 1 1 1h2v6h18v-6h2c.552 0 1-.448 1-1v-1c0-.552.448-1 1-1h3v-2c0-2.2-1.8-4-4-4H6z" fill="#d9a91f" opacity="0.12"/>
-          <rect x="14" y="33" width="12" height="4" rx="1" fill="#1f2937"/>
-          <rect x="10" y="37" width="20" height="4" rx="1" fill="#111827" />
-          <circle cx="24" cy="9" r="6" fill="#fff8e6" opacity="0.25"/>
-        </g>
-      </svg>
+    <!-- Imagen REAL -->
+    <img class="img" src="balondoro.webp" alt="Balón de Oro">
 
-      <div class="caption">Los mejores de la historia.</div>
-      <div class="sub">Una pequeña galería de los grandes ganadores del Balón de Oro.</div>
-
-      <!-- botón opcional para sustituir la imagen por una real -->
-      <a class="btn" href="#" onclick="alert('Sustituye el SVG por <img src=\"balondoro.webp\"> o pon la URL de la imagen.'); return false;">Reemplazar imagen</a>
-    </div>
+    <div class="caption">Los mejores de la historia.</div>
   </div>
 </body>
 </html>
-
