@@ -99,7 +99,7 @@
 
     #lista{
       margin:50px auto;
-      max-width:700px;
+      max-width:1200px;
       padding:25px;
       background: rgba(20,20,20,0.7);
       border-radius:18px;
@@ -119,7 +119,7 @@
 
     .grid{
       display:grid;
-      grid-template-columns:1fr 1fr;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
       gap:16px;
     }
 
@@ -133,17 +133,6 @@
       color:var(--gold-light);
       font-size:14px;
       font-family: var(--font-body);
-    }
-
-    .box a{
-      text-decoration:none;
-      color:var(--gold-light);
-      font-weight:700;
-      font-family: var(--font-body);
-    }
-
-    .box a:hover{
-      text-shadow:0 0 8px var(--gold);
     }
 
     .player-img{
@@ -160,47 +149,87 @@
   <!-- TARJETA PRINCIPAL -->
   <div class="card">
     <h2 class="title">Ganadores del Balón de Oro</h2>
-
-    <img class="img" src="balondoro.webp" alt="Balón de Oro">
-
+    <img class="img" src="imagenes/balondoro.webp" alt="Balón de Oro">
     <div class="caption">Los mejores de la historia.</div>
-
     <button class="btn" onclick="document.getElementById('lista').scrollIntoView({behavior:'smooth'})">
       Ver lista completa
     </button>
   </div>
 
-
-  <!-- LISTA CRONOLÓGICA -->
+  <!-- LISTA COMPLETA -->
   <div id="lista">
     <div class="list-title">Ganadores por Año</div>
-
     <div class="grid">
 
-      <div class="box">
-        <a href="2021_messi.html">2021 – Lionel Messi</a>
-        <img src="imagenes/messi.jpg" alt="Messi" class="player-img">
-      </div>
-
-      <div class="box">
-        <a href="2022_benzema.html">2022 – Karim Benzema</a>
-        <img src="imagenes/benzema.jpg" alt="Benzema" class="player-img">
-      </div>
-
-      <div class="box">
-        <a href="2023_messi.html">2023 – Lionel Messi</a>
-        <img src="imagenes/messi.jpg" alt="Messi" class="player-img">
-      </div>
-
-      <div class="box">
-        <a href="2024_rodri.html">2024 – Rodri</a>
-        <img src="imagenes/rodri.jpeg" alt="Rodri" class="player-img">
-      </div>
-
-      <div class="box">
-        <a href="2025_dembele.html">2025 – Dembélé</a>
-        <img src="imagenes/dembele.webp" alt="Dembélé" class="player-img">
-      </div>
+      <div class="box">1956 – Stanley Matthews<br><img src="imagenes/matthews.jpg" class="player-img" alt="Stanley Matthews"></div>
+      <div class="box">1957 – Alfredo Di Stéfano<br><img src="imagenes/distefano.jpg" class="player-img" alt="Alfredo Di Stéfano"></div>
+      <div class="box">1958 – Raymond Kopa<br><img src="imagenes/kopa.jpg" class="player-img" alt="Raymond Kopa"></div>
+      <div class="box">1959 – Alfredo Di Stéfano<br><img src="imagenes/distefano.jpg" class="player-img" alt="Alfredo Di Stéfano"></div>
+      <div class="box">1960 – Luis Suárez<br><img src="imagenes/luissuarez.jpg" class="player-img" alt="Luis Suárez"></div>
+      <div class="box">1961 – Omar Sívori<br><img src="imagenes/sivori.jpg" class="player-img" alt="Omar Sívori"></div>
+      <div class="box">1962 – Josef Masopust<br><img src="imagenes/masopust.jpg" class="player-img" alt="Josef Masopust"></div>
+      <div class="box">1963 – Lev Yashin<br><img src="imagenes/yashin.jpg" class="player-img" alt="Lev Yashin"></div>
+      <div class="box">1964 – Denis Law<br><img src="imagenes/law.jpg" class="player-img" alt="Denis Law"></div>
+      <div class="box">1965 – Eusébio<br><img src="imagenes/eusebio.jpg" class="player-img" alt="Eusébio"></div>
+      <div class="box">1966 – Bobby Charlton<br><img src="imagenes/charlton.jpg" class="player-img" alt="Bobby Charlton"></div>
+      <div class="box">1967 – Flórián Albert<br><img src="imagenes/albert.jpg" class="player-img" alt="Flórián Albert"></div>
+      <div class="box">1968 – George Best<br><img src="imagenes/best.jpg" class="player-img" alt="George Best"></div>
+      <div class="box">1969 – Gianni Rivera<br><img src="imagenes/rivera.jpg" class="player-img" alt="Gianni Rivera"></div>
+      <div class="box">1970 – Gerd Müller<br><img src="imagenes/muller.jpg" class="player-img" alt="Gerd Müller"></div>
+      <div class="box">1971 – Johan Cruyff<br><img src="imagenes/cruyff.jpg" class="player-img" alt="Johan Cruyff"></div>
+      <div class="box">1972 – Franz Beckenbauer<br><img src="imagenes/beckenbauer.jpg" class="player-img" alt="Franz Beckenbauer"></div>
+      <div class="box">1973 – Johan Cruyff<br><img src="imagenes/cruyff.jpg" class="player-img" alt="Johan Cruyff"></div>
+      <div class="box">1974 – Johan Cruyff<br><img src="imagenes/cruyff.jpg" class="player-img" alt="Johan Cruyff"></div>
+      <div class="box">1975 – Oleg Blokhin<br><img src="imagenes/blokhin.jpg" class="player-img" alt="Oleg Blokhin"></div>
+      <div class="box">1976 – Franz Beckenbauer<br><img src="imagenes/beckenbauer.jpg" class="player-img" alt="Franz Beckenbauer"></div>
+      <div class="box">1977 – Allan Simonsen<br><img src="imagenes/simonsen.jpg" class="player-img" alt="Allan Simonsen"></div>
+      <div class="box">1978 – Kevin Keegan<br><img src="imagenes/keegan.jpg" class="player-img" alt="Kevin Keegan"></div>
+      <div class="box">1979 – Kevin Keegan<br><img src="imagenes/keegan.jpg" class="player-img" alt="Kevin Keegan"></div>
+      <div class="box">1980 – Karl-Heinz Rummenigge<br><img src="imagenes/rummenigge.jpg" class="player-img" alt="Karl-Heinz Rummenigge"></div>
+      <div class="box">1981 – Karl-Heinz Rummenigge<br><img src="imagenes/rummenigge.jpg" class="player-img" alt="Karl-Heinz Rummenigge"></div>
+      <div class="box">1982 – Paolo Rossi<br><img src="imagenes/rossi.jpg" class="player-img" alt="Paolo Rossi"></div>
+      <div class="box">1983 – Michel Platini<br><img src="imagenes/platini.jpg" class="player-img" alt="Michel Platini"></div>
+      <div class="box">1984 – Michel Platini<br><img src="imagenes/platini.jpg" class="player-img" alt="Michel Platini"></div>
+      <div class="box">1985 – Michel Platini<br><img src="imagenes/platini.jpg" class="player-img" alt="Michel Platini"></div>
+      <div class="box">1986 – Igor Belanov<br><img src="imagenes/belanov.jpg" class="player-img" alt="Igor Belanov"></div>
+      <div class="box">1987 – Ruud Gullit<br><img src="imagenes/gullit.jpg" class="player-img" alt="Ruud Gullit"></div>
+      <div class="box">1988 – Marco van Basten<br><img src="imagenes/vanbasten.jpg" class="player-img" alt="Marco van Basten"></div>
+      <div class="box">1989 – Marco van Basten<br><img src="imagenes/vanbasten.jpg" class="player-img" alt="Marco van Basten"></div>
+      <div class="box">1990 – Lothar Matthäus<br><img src="imagenes/matthaus.jpg" class="player-img" alt="Lothar Matthäus"></div>
+      <div class="box">1991 – Jean-Pierre Papin<br><img src="imagenes/papin.jpg" class="player-img" alt="Jean-Pierre Papin"></div>
+      <div class="box">1992 – Marco van Basten<br><img src="imagenes/vanbasten.jpg" class="player-img" alt="Marco van Basten"></div>
+      <div class="box">1993 – Roberto Baggio<br><img src="imagenes/baggio.jpg" class="player-img" alt="Roberto Baggio"></div>
+      <div class="box">1994 – Hristo Stoichkov<br><img src="imagenes/stoichkov.jpg" class="player-img" alt="Hristo Stoichkov"></div>
+      <div class="box">1995 – George Weah<br><img src="imagenes/weah.jpg" class="player-img" alt="George Weah"></div>
+      <div class="box">1996 – Matthias Sammer<br><img src="imagenes/sammer.jpg" class="player-img" alt="Matthias Sammer"></div>
+      <div class="box">1997 – Ronaldo<br><img src="imagenes/ronaldo97.jpg" class="player-img" alt="Ronaldo"></div>
+      <div class="box">1998 – Zinedine Zidane<br><img src="imagenes/zidane.jpg" class="player-img" alt="Zinedine Zidane"></div>
+      <div class="box">1999 – Rivaldo<br><img src="imagenes/rivaldo.jpg" class="player-img" alt="Rivaldo"></div>
+      <div class="box">2000 – Luis Figo<br><img src="imagenes/figo.jpg" class="player-img" alt="Luis Figo"></div>
+      <div class="box">2001 – Michael Owen<br><img src="imagenes/owen.jpg" class="player-img" alt="Michael Owen"></div>
+      <div class="box">2002 – Ronaldo<br><img src="imagenes/ronaldo02.jpg" class="player-img" alt="Ronaldo"></div>
+      <div class="box">2003 – Pavel Nedvěd<br><img src="imagenes/nedved.jpg" class="player-img" alt="Pavel Nedvěd"></div>
+      <div class="box">2004 – Andriy Shevchenko<br><img src="imagenes/shevchenko.jpg" class="player-img" alt="Andriy Shevchenko"></div>
+      <div class="box">2005 – Ronaldinho<br><img src="imagenes/ronaldinho.jpg" class="player-img" alt="Ronaldinho"></div>
+      <div class="box">2006 – Fabio Cannavaro<br><img src="imagenes/cannavaro.jpg" class="player-img" alt="Fabio Cannavaro"></div>
+      <div class="box">2007 – Kaká<br><img src="imagenes/kaka.jpg" class="player-img" alt="Kaká"></div>
+      <div class="box">2008 – Cristiano Ronaldo<br><img src="imagenes/cr7.jpg" class="player-img" alt="Cristiano Ronaldo"></div>
+      <div class="box">2009 – Lionel Messi<br><img src="imagenes/messi.jpg" class="player-img" alt="Lionel Messi"></div>
+      <div class="box">2010 – Lionel Messi<br><img src="imagenes/messi.jpg" class="player-img" alt="Lionel Messi"></div>
+      <div class="box">2011 – Lionel Messi<br><img src="imagenes/messi.jpg" class="player-img" alt="Lionel Messi"></div>
+      <div class="box">2012 – Lionel Messi<br><img src="imagenes/messi.jpg" class="player-img" alt="Lionel Messi"></div>
+      <div class="box">2013 – Cristiano Ronaldo<br><img src="imagenes/cr7.jpg" class="player-img" alt="Cristiano Ronaldo"></div>
+      <div class="box">2014 – Cristiano Ronaldo<br><img src="imagenes/cr7.jpg" class="player-img" alt="Cristiano Ronaldo"></div>
+      <div class="box">2015 – Lionel Messi<br><img src="imagenes/messi.jpg" class="player-img" alt="Lionel Messi"></div>
+      <div class="box">2016 – Cristiano Ronaldo<br><img src="imagenes/cr7.jpg" class="player-img" alt="Cristiano Ronaldo"></div>
+      <div class="box">2017 – Cristiano Ronaldo<br><img src="imagenes/cr7.jpg" class="player-img" alt="Cristiano Ronaldo"></div>
+      <div class="box">2018 – Luka Modrić<br><img src="imagenes/modric.jpg" class="player-img" alt="Luka Modrić"></div>
+      <div class="box">2019 – Lionel Messi<br><img src="imagenes/messi.jpg" class="player-img" alt="Lionel Messi"></div>
+      <div class="box">2021 – Lionel Messi<br><img src="imagenes/messi.jpg" class="player-img" alt="Lionel Messi"></div>
+      <div class="box">2022 – Karim Benzema<br><img src="imagenes/benzema.jpg" class="player-img" alt="Karim Benzema"></div>
+      <div class="box">2023 – Lionel Messi<br><img src="imagenes/messi.jpg" class="player-img" alt="Lionel Messi"></div>
+      <div class="box">2024 – Rodri<br><img src="imagenes/rodri.jpeg" class="player-img" alt="Rodri"></div>
+      <div class="box">2025 – Dembélé<br><img src="imagenes/dembele.webp" class="player-img" alt="Dembélé"></div>
 
     </div>
   </div>
