@@ -18,14 +18,11 @@
       margin:0;
       min-height:100vh;
       background: radial-gradient(circle at center, #121212 0%, #000000 100%);
-      color:white;
-      padding-bottom:40px;
-    }
-
-    .center{
       display:flex;
-      justify-content:center;
       align-items:center;
+      justify-content:center;
+      padding:40px;
+      color:white;
     }
 
     .card{
@@ -36,13 +33,12 @@
       width:360px;
       max-width:95vw;
       text-align:center;
-      margin:40px auto;
-      position:relative;
       box-shadow: 0 0 25px rgba(0,0,0,0.8),
                   0 0 50px rgba(255,215,0,0.06);
       border: 1px solid rgba(255,215,0,0.18);
     }
 
+    /* Borde dorado doble */
     .card::before{
       content:"";
       position:absolute;
@@ -58,13 +54,16 @@
       letter-spacing:1px;
       font-weight:700;
       color:var(--gold-light);
+      text-shadow:0 2px 10px rgba(0,0,0,0.7);
     }
 
     .img{
       width:200px;
+      height:auto;
       border-radius:12px;
+      box-shadow:0 0 20px rgba(0,0,0,0.7),
+                 0 0 25px rgba(255,215,0,0.12);
       border:2px solid rgba(255,215,0,0.25);
-      box-shadow:0 0 20px rgba(0,0,0,0.7), 0 0 25px rgba(255,215,0,0.12);
     }
 
     .caption{
@@ -75,152 +74,16 @@
       text-shadow:0 2px 12px rgba(0,0,0,0.9);
     }
 
-    /* BOTÓN */
-    .btn{
-      margin-top:25px;
-      padding:12px 18px;
-      font-size:16px;
-      font-weight:700;
-      color:black;
-      background: linear-gradient(135deg, var(--gold-light), var(--gold-dark));
-      border:none;
-      border-radius:12px;
-      cursor:pointer;
-      transition:0.2s;
-    }
-
-    .btn:hover{
-      box-shadow:0 0 12px var(--gold);
-      transform:scale(1.03);
-    }
-
-    /* LISTA DE GANADORES */
-    #lista{
-      margin:50px auto;
-      max-width:600px;
-      padding:25px;
-      background: rgba(20,20,20,0.7);
-      border-radius:18px;
-      border:1px solid rgba(255,215,0,0.25);
-      box-shadow:0 0 25px rgba(0,0,0,0.7);
-    }
-
-    .list-title{
-      text-align:center;
-      font-size:24px;
-      font-weight:700;
-      color:var(--gold-light);
-      margin-bottom:20px;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:12px;
-    }
-
-    .box{
-      padding:12px;
-      border-radius:10px;
-      background: rgba(255,215,0,0.08);
-      border:1px solid rgba(255,215,0,0.25);
-      text-align:center;
-      font-weight:600;
-      color:var(--gold-light);
-      font-size:14px;
-    }
   </style>
 </head>
 <body>
-
-  <!-- TARJETA PRINCIPAL -->
   <div class="card">
     <h2 class="title">Ganadores del Balón de Oro</h2>
 
+    <!-- Imagen REAL -->
     <img class="img" src="balondoro.webp" alt="Balón de Oro">
 
     <div class="caption">Los mejores de la historia.</div>
-
-    <button class="btn" onclick="document.getElementById('lista').scrollIntoView({behavior:'smooth'})">
-      Ver lista completa
-    </button>
   </div>
-
-
-  <!-- LISTA CRONOLÓGICA -->
-  <div id="lista">
-    <div class="list-title">Ganadores por Año</div>
-
-    <div class="grid">
-      <div class="box">1956 – Stanley Matthews</div>
-      <div class="box">1957 – Alfredo Di Stéfano</div>
-      <div class="box">1958 – Raymond Kopa</div>
-      <div class="box">1959 – Alfredo Di Stéfano</div>
-      <div class="box">1960 – Luis Suárez</div>
-      <div class="box">1961 – Omar Sívori</div>
-      <div class="box">1962 – Josef Masopust</div>
-      <div class="box">1963 – Lev Yashin</div>
-      <div class="box">1964 – Denis Law</div>
-      <div class="box">1965 – Eusébio</div>
-      <div class="box">1966 – Bobby Charlton</div>
-      <div class="box">1967 – Flórián Albert</div>
-      <div class="box">1968 – George Best</div>
-      <div class="box">1969 – Gianni Rivera</div>
-      <div class="box">1970 – Gerd Müller</div>
-      <div class="box">1971 – Johan Cruyff</div>
-      <div class="box">1972 – Franz Beckenbauer</div>
-      <div class="box">1973 – Johan Cruyff</div>
-      <div class="box">1974 – Johan Cruyff</div>
-      <div class="box">1975 – Oleg Blokhin</div>
-      <div class="box">1976 – Franz Beckenbauer</div>
-      <div class="box">1977 – Allan Simonsen</div>
-      <div class="box">1978 – Kevin Keegan</div>
-      <div class="box">1979 – Kevin Keegan</div>
-      <div class="box">1980 – Karl-Heinz Rummenigge</div>
-      <div class="box">1981 – Karl-Heinz Rummenigge</div>
-      <div class="box">1982 – Paolo Rossi</div>
-      <div class="box">1983 – Michel Platini</div>
-      <div class="box">1984 – Michel Platini</div>
-      <div class="box">1985 – Michel Platini</div>
-      <div class="box">1986 – Igor Belanov</div>
-      <div class="box">1987 – Ruud Gullit</div>
-      <div class="box">1988 – Marco van Basten</div>
-      <div class="box">1989 – Marco van Basten</div>
-      <div class="box">1990 – Lothar Matthäus</div>
-      <div class="box">1991 – Jean-Pierre Papin</div>
-      <div class="box">1992 – Marco van Basten</div>
-      <div class="box">1993 – Roberto Baggio</div>
-      <div class="box">1994 – Hristo Stoichkov</div>
-      <div class="box">1995 – George Weah</div>
-      <div class="box">1996 – Matthias Sammer</div>
-      <div class="box">1997 – Ronaldo</div>
-      <div class="box">1998 – Zinedine Zidane</div>
-      <div class="box">1999 – Rivaldo</div>
-      <div class="box">2000 – Luis Figo</div>
-      <div class="box">2001 – Michael Owen</div>
-      <div class="box">2002 – Ronaldo</div>
-      <div class="box">2003 – Pavel Nedvěd</div>
-      <div class="box">2004 – Andriy Shevchenko</div>
-      <div class="box">2005 – Ronaldinho</div>
-      <div class="box">2006 – Fabio Cannavaro</div>
-      <div class="box">2007 – Kaká</div>
-      <div class="box">2008 – Cristiano Ronaldo</div>
-      <div class="box">2009 – Lionel Messi</div>
-      <div class="box">2010 – Lionel Messi</div>
-      <div class="box">2011 – Lionel Messi</div>
-      <div class="box">2012 – Lionel Messi</div>
-      <div class="box">2013 – Cristiano Ronaldo</div>
-      <div class="box">2014 – Cristiano Ronaldo</div>
-      <div class="box">2015 – Lionel Messi</div>
-      <div class="box">2016 – Cristiano Ronaldo</div>
-      <div class="box">2017 – Cristiano Ronaldo</div>
-      <div class="box">2018 – Luka Modrić</div>
-      <div class="box">2019 – Lionel Messi</div>
-      <div class="box">2021 – Lionel Messi</div>
-      <div class="box">2022 – Karim Benzema</div>
-      <div class="box">2023 – Lionel Messi</div>
-    </div>
-  </div>
-
 </body>
 </html>
