@@ -16,7 +16,6 @@
       --black:#0b0b0c;
       --black-soft:#141417;
 
-      /* Fuentes elegantes */
       --font-title: "Playfair Display", serif;
       --font-body: "Montserrat", sans-serif;
     }
@@ -28,12 +27,6 @@
       color:white;
       padding-bottom:40px;
       font-family: var(--font-body);
-    }
-
-    .center{
-      display:flex;
-      justify-content:center;
-      align-items:center;
     }
 
     .card{
@@ -106,7 +99,7 @@
 
     #lista{
       margin:50px auto;
-      max-width:600px;
+      max-width:700px;
       padding:25px;
       background: rgba(20,20,20,0.7);
       border-radius:18px;
@@ -127,7 +120,7 @@
     .grid{
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:12px;
+      gap:16px;
     }
 
     .box{
@@ -152,6 +145,14 @@
     .box a:hover{
       text-shadow:0 0 8px var(--gold);
     }
+
+    .player-img{
+      margin-top:8px;
+      width:100%;
+      border-radius:8px;
+      box-shadow:0 0 12px rgba(0,0,0,0.6);
+      border:1px solid rgba(255,215,0,0.25);
+    }
   </style>
 </head>
 <body>
@@ -170,24 +171,39 @@
   </div>
 
 
-  <!-- LISTA CRONOLÓGICA (idéntica a la que ya tienes, solo cambian las fuentes) -->
+  <!-- LISTA CRONOLÓGICA -->
   <div id="lista">
     <div class="list-title">Ganadores por Año</div>
 
     <div class="grid">
 
-      <!-- Aquí van todos los ganadores igual que antes -->
-      <!-- Solo te muestro los últimos por brevedad -->
+      <div class="box">
+        <a href="2021_messi.html">2021 – Lionel Messi</a>
+        <img src="messi.jpg" alt="Messi" class="player-img">
+      </div>
 
-      <div class="box"><a href="2021_messi.html">2021 – Lionel Messi</a></div>
-      <div class="box"><a href="2022_benzema.html">2022 – Karim Benzema</a></div>
-      <div class="box"><a href="2023_messi.html">2023 – Lionel Messi</a></div>
-      <div class="box"><a href="2024_rodri.html">2024 – Rodri</a></div>
-      <div class="box"><a href="2025_dembele.html">2025 – Dembélé</a></div>
+      <div class="box">
+        <a href="2022_benzema.html">2022 – Karim Benzema</a>
+        <img src="imagenes/benzema.jpg" alt="Benzema" class="player-img">
+      </div>
+
+      <div class="box">
+        <a href="2023_messi.html">2023 – Lionel Messi</a>
+        <img src="imagenes/messi.jpg" alt="Messi" class="player-img">
+      </div>
+
+      <div class="box">
+        <a href="2024_rodri.html">2024 – Rodri</a>
+        <img src="imagenes/rodri.jpg" alt="Rodri" class="player-img">
+      </div>
+
+      <div class="box">
+        <a href="2025_dembele.html">2025 – Dembélé</a>
+        <img src="imagenes/dembele.jpg" alt="Dembélé" class="player-img">
+      </div>
 
     </div>
   </div>
 
 </body>
 </html>
-v
