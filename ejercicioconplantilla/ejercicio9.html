@@ -10,7 +10,7 @@
   <style>
     :root{ --bg:#0f1724; --card:#0b1220; --muted:#98a0b3; --accent:#7c3aed; --accent-2:#06b6d4; --glass: rgba(255,255,255,0.04); --radius:14px; --maxw:1100px; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
     *{box-sizing:border-box}
-    body{ margin:0; background: linear-gradient(180deg, rgba(12,18,28,1) 0%, rgba(7,10,16,1) 100%); color:#e6eef8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; line-height:1.5; }
+    body{ margin:0; background: linear-gradient(180deg, rgba(12,18,28,1) 0%, rgba(7,10,16,1) 100%); color:#e6eef8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; line-height:1.5; scroll-behavior: smooth; }
     .wrap{max-width:var(--maxw);margin:0 auto;padding:24px}
     header{display:flex;align-items:center;justify-content:space-between;padding:12px 0;}
     .brand{display:flex;align-items:center;gap:12px}
@@ -69,21 +69,27 @@
             <a class="btn" href="#portafolio">Ver proyectos</a>
             <a class="btn" href="#contacto">Contactar</a>
           </div>
-
-          <div style="margin-top:16px;display:flex;gap:12px;align-items:center">
-            <div class="socials">
-              <a aria-label="GitHub" href="#" style="text-decoration:none;color:var(--muted);font-weight:600">GitHub</a>
-              <a aria-label="LinkedIn" href="#" style="text-decoration:none;color:var(--muted);font-weight:600">LinkedIn</a>
-              <a aria-label="Twitter" href="#" style="text-decoration:none;color:var(--muted);font-weight:600">Twitter</a>
-            </div>
-          </div>
         </div>
 
         <aside style="display:flex;justify-content:center;align-items:center">
           <div class="avatar" aria-hidden="false">
-            <img src="imagenes/Mark_Evans.jpg" alt="Mark Evans"/>
+            <img src="imagenes/Mark_EVans.jpg" alt="Mark Evans"/>
           </div>
         </aside>
+      </section>
+
+      <section id="sobre">
+        <div class="section-title">
+          <h2>Sobre mí</h2>
+        </div>
+        <div class="card">
+          <p>Soy desarrollador front-end con más de X años creando interfaces interactivas y accesibles. Me encanta transformar ideas complejas en experiencias limpias y sencillas. Trabajo con equipos multidisciplinares y disfruto aprendiendo nuevas tecnologías.</p>
+          <ul style="color:var(--muted);margin-top:12px">
+            <li>Experiencia en creación de SPAs con React.</li>
+            <li>Optimización de rendimiento y mejores prácticas web.</li>
+            <li>Diseño responsivo y mobile-first.</li>
+          </ul>
+        </div>
       </section>
 
       <!-- Resto del contenido permanece igual -->
