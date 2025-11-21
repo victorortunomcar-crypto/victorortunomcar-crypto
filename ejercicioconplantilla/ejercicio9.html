@@ -108,6 +108,7 @@
     </header>
 
     <main>
+      <!-- Sección Hero -->
       <section class="hero" id="inicio" aria-label="Sección inicio">
         <div class="hero-inner">
           <h1 class="hero-title">Victor Ortuño</h1>
@@ -136,7 +137,58 @@
         </aside>
       </section>
 
-      <!-- Las secciones Sobre mí, Portafolio y Contacto siguen con el mismo contenido, adaptando colores -->
+      <!-- Sección Sobre mí -->
+      <section id="sobre" aria-label="Sobre mí">
+        <div class="section-title">
+          <h2>Sobre mí</h2>
+        </div>
+        <p>Soy Victor Ortuño, diseñador y desarrollador web con pasión por crear experiencias digitales atractivas y accesibles. Me especializo en interfaces, front-end y diseño de experiencia de usuario.</p>
+        <p>Me encanta trabajar en proyectos que combinan creatividad y funcionalidad, optimizando el rendimiento y la usabilidad.</p>
+      </section>
+
+      <!-- Sección Portafolio -->
+      <section id="portafolio" aria-label="Portafolio">
+        <div class="section-title">
+          <h2>Portafolio</h2>
+        </div>
+        <div class="grid portfolio-grid">
+          <div class="card">
+            <div class="project-img">
+              <img src="https://via.placeholder.com/400x180.png?text=Proyecto+1" alt="Proyecto 1">
+            </div>
+            <h3>Proyecto 1</h3>
+            <p>Descripción breve del proyecto 1, mostrando tecnología usada y objetivo principal.</p>
+            <a href="#" class="btn">Ver más</a>
+          </div>
+          <div class="card">
+            <div class="project-img">
+              <img src="https://via.placeholder.com/400x180.png?text=Proyecto+2" alt="Proyecto 2">
+            </div>
+            <h3>Proyecto 2</h3>
+            <p>Descripción breve del proyecto 2, mostrando tecnología usada y objetivo principal.</p>
+            <a href="#" class="btn">Ver más</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Contacto -->
+      <section id="contacto" aria-label="Contacto">
+        <div class="section-title">
+          <h2>Contacto</h2>
+        </div>
+        <form>
+          <input type="text" name="nombre" placeholder="Nombre" required>
+          <input type="email" name="email" placeholder="Correo electrónico" required>
+          <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+
+        <div class="socials" style="margin-top:12px">
+          <a href="#" target="_blank">LinkedIn</a>
+          <a href="#" target="_blank">GitHub</a>
+          <a href="#" target="_blank">Twitter</a>
+        </div>
+      </section>
 
     </main>
 
